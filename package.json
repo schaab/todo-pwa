@@ -1,0 +1,32 @@
+{
+  "name": "todo-pwa",
+  "version": "1.0.0",
+  "description": "todo progressive web app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "kcd-scripts test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schaab/todo-pwa.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schaab/todo-pwa/issues"
+  },
+  "homepage": "https://github.com/schaab/todo-pwa#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.0.1",
+    "@material-ui/styles": "^4.0.1",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "kcd-scripts": "^1.4.0"
+  }
+}
