@@ -36,6 +36,6 @@ const config = {
 };
 
 module.exports = pipe(
+  withManifest,
   withOffline,
-  withManifest
 )(config);
