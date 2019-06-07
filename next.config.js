@@ -1,41 +1,41 @@
-const { resolve } = require('path');
-const withOffline = require("next-offline");
-const withManifest = require("next-manifest");
+const {resolve} = require('path')
+const withOffline = require('next-offline')
+const withManifest = require('next-manifest')
 
-const pipe = (...fns) => x => fns.reduce((val, f) => f(val), x);
+const pipe = (...fns) => x => fns.reduce((val, f) => f(val), x)
 const config = {
-  target: "serverless",
+  target: 'serverless',
   manifest: {
-    name: "Todos",
-    short_name: "Todos",
+    name: 'Todos',
+    short_name: 'Todos',
     icons: {
       src: resolve(process.cwd(), './assets/icon.png'),
-      cache: true
-  }
+      cache: true,
+    },
   },
   workboxOpts: {
-    swDest: "static/service-worker.js",
+    swDest: 'static/service-worker.js',
     runtimeCaching: [
       {
         urlPattern: /^https?.*/,
-        handler: "NetworkFirst",
+        handler: 'NetworkFirst',
         options: {
-          cacheName: "https-calls",
+          cacheName: 'https-calls',
           networkTimeoutSeconds: 15,
           expiration: {
             maxEntries: 150,
-            maxAgeSeconds: 30 * 24 * 60 * 60 // 1 month
+            maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
           },
           cacheableResponse: {
-            statuses: [0, 200]
-          }
-        }
-      }
-    ]
-  }
-};
+            statuses: [0, 200],
+          },
+        },
+      },
+    ],
+  },
+}
 
 module.exports = pipe(
   withManifest,
   withOffline,
-)(config);
+)(config)

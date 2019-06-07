@@ -1,7 +1,7 @@
-import Typography from '@material-ui/core/Typography';
+import Typography from '@material-ui/core/Typography'
 
 function Home() {
-    return <Typography>Welcome to Next.js!</Typography>
-  }
-  
+  return <Typography>Welcome to Next.js!</Typography>
+}
+
 export default Home
