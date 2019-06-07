@@ -3,7 +3,6 @@ import Document, {Head, Main, NextScript} from 'next/document'
 import {ServerStyleSheets} from '@material-ui/styles'
 import Manifest from 'next-manifest/manifest'
 import flush from 'styled-jsx/server'
-import theme from '../src/theme'
 
 class MyDocument extends Document {
   render() {
@@ -11,7 +10,7 @@ class MyDocument extends Document {
       <html lang="en" dir="ltr">
         <Head>
           <meta charSet="utf-8" />
-          <Manifest href="/manifest.json" />
+          <Manifest />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
