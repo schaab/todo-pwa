@@ -9,7 +9,8 @@
         "cache-control": "public, max-age=43200, immutable",
         "Service-Worker-Allowed": "/"
       }
-    }
+    },
+    { "src": "/manifest.json", "dest": "/static/manifest/manifest.json" }
   ],
   "builds": [
     {
