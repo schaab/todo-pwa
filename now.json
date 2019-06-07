@@ -10,7 +10,10 @@
         "Service-Worker-Allowed": "/"
       }
     },
-    { "src": "/manifest.json", "dest": "/static/manifest/manifest.json" }
+    {
+      "src": "/static/manifest/manifest.json",
+      "dest": "/static/manifest/manifest.json"
+    }
   ],
   "builds": [
     {
