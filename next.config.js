@@ -1,3 +1,4 @@
+const { resolve } = require('path');
 const withOffline = require("next-offline");
 const withManifest = require("next-manifest");
 
@@ -7,42 +8,10 @@ const config = {
   manifest: {
     name: "Todos",
     short_name: "Todos",
-    icons: [
-      {
-        src: "/static/icons/todos-128.png",
-        sizes: "128x128",
-        type: "image/png"
-      },
-      {
-        src: "/static/icons/todos-144.png",
-        sizes: "144x144",
-        type: "image/png"
-      },
-      {
-        src: "/static/icons/todos-152.png",
-        sizes: "152x152",
-        type: "image/png"
-      },
-      {
-        src: "/static/icons/todos-192.png",
-        sizes: "192x192",
-        type: "image/png"
-      },
-      {
-        src: "/static/icons/todos-256.png",
-        sizes: "256x256",
-        type: "image/png"
-      },
-      {
-        src: "/static/icons/todos-512.png",
-        sizes: "512x512",
-        type: "image/png"
-      }
-    ],
-    start_url: "/",
-    display: "standalone",
-    background_color: "white",
-    theme_color: "#c900ff"
+    icons: {
+      src: resolve(process.cwd(), './assets/icon.png'),
+      cache: true
+  }
   },
   workboxOpts: {
     swDest: "static/service-worker.js",
