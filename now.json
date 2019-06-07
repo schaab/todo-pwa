@@ -11,7 +11,7 @@
       }
     },
     {
-      "src": "/static/manifest/manifest.json",
+      "src": "^/manifest.json",
       "dest": "/static/manifest/manifest.json"
     }
   ],
@@ -19,6 +19,7 @@
     {
       "src": "next.config.js",
       "use": "@now/next"
-    }
+    },
+    {"src": "static/**", "use": "@now/static"}
   ]
 }
