@@ -9,10 +9,6 @@
         "cache-control": "public, max-age=43200, immutable",
         "Service-Worker-Allowed": "/"
       }
-    },
-    {
-      "src": "^/static/manifest/manifest.json",
-      "dest": "/static/manifest/manifest.json"
     }
   ],
   "builds": [
@@ -20,6 +16,6 @@
       "src": "next.config.js",
       "use": "@now/next"
     },
-    {"src": "static/**", "use": "@now/static"}
+    {"src": "static/**/*", "use": "@now/static"}
   ]
 }
