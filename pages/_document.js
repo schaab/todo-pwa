@@ -1,7 +1,6 @@
 import React from 'react'
 import Document, {Head, Main, NextScript} from 'next/document'
 import {ServerStyleSheets} from '@material-ui/styles'
-import Manifest from 'next-manifest/manifest'
 import flush from 'styled-jsx/server'
 
 class MyDocument extends Document {
@@ -10,7 +9,9 @@ class MyDocument extends Document {
       <html lang="en" dir="ltr">
         <Head>
           <meta charSet="utf-8" />
-          <Manifest />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="theme-color" content="#FFFFFF" />
+          <link rel="manifest" href="/static/manifest/manifest.json" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
