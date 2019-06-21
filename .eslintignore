@@ -1,0 +1,6 @@
+node_modules/
+coverage/
+.next/
+jest.config.jest
+prettierrc.js
+pages/

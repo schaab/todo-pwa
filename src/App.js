@@ -1,23 +1,30 @@
-import React from "react";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
+import React from 'react'
+import Grid from '@material-ui/core/Grid'
+//import R from 'ramda'
+
+/* const createColumn = ({title = 'unamed', items = [], order = 0} = {}) => ({
+  title,
+  items,
+  order,
+})
+ */
+//const sortByOrder = R.sortBy(R.prop('order'))
 
 const App = () => {
-   return  (
-  <Grid 
-    container
-    direction="row"
-    justify="space-evenly"
-    alignItems="stretch">
-    {[0, 1, 2, 3].map(value => (
-      <Grid key={value} item xs={3}>
-        <Paper width="90%" height="100%">Haaay</Paper>
-      </Grid>
-    ))}
-  </Grid>
-)
-    };
+  /* const columns = [
+    createColumn({title: 'Todo'}),
+    createColumn({title: 'In Progress'}),
+    createColumn({title: 'Done'}),
+    createColumn({title: 'Blocked'}),
+  ]
+ */
+  return (
+    <Grid container direction="row" justify="space-evenly" alignItems="stretch">
+      {}
+    </Grid>
+  )
+}
 
-App.displayName = "App";
+App.displayName = 'App'
 
-export default App;
+export default App
