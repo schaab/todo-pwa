@@ -1,5 +1,6 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
+import Column from './components/Column'
 //import R from 'ramda'
 
 /* const createColumn = ({title = 'unamed', items = [], order = 0} = {}) => ({
@@ -20,7 +21,7 @@ const App = () => {
  */
   return (
     <Grid container direction="row" justify="space-evenly" alignItems="stretch">
-      {}
+      <Column />
     </Grid>
   )
 }
