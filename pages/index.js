@@ -1,7 +1,4 @@
-import Typography from '@material-ui/core/Typography'
+import React from 'react'
+import App from '../src/App'
 
-function Home() {
-  return <Typography>Welcome to Next.js!</Typography>
-}
-
-export default Home
+export default () => <App />

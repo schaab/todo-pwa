@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "test": "kcd-scripts test",
-    "format": "kcd-scripts format"
+    "format": "kcd-scripts format",
+    "lint": "kcd-scripts lint"
   },
   "husky": {
     "hooks": {
@@ -26,15 +27,22 @@
   },
   "homepage": "https://github.com/schaab/todo-pwa#readme",
   "dependencies": {
-    "@material-ui/core": "^4.0.1",
-    "@material-ui/styles": "^4.0.1",
-    "next": "^8.1.0",
-    "next-offline": "^4.0.1",
+    "@babel/runtime": "^7.5.5",
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/icons": "^4.2.1",
+    "@material-ui/styles": "^4.2.1",
+    "next": "^9.0.2",
+    "next-offline": "^4.0.2",
+    "prop-types": "^15.7.2",
+    "ramda": "^0.26.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "styled-jsx": "^3.2.1"
+    "styled-jsx": "^3.2.1",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "kcd-scripts": "^1.4.0"
+    "@testing-library/jest-dom": "^4.0.0",
+    "@testing-library/react": "^8.0.5",
+    "kcd-scripts": "^1.5.2"
   }
 }
